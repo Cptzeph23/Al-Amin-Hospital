@@ -1,0 +1,63 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+    <!-- Content for the about page -->
+    <main>
+        <!-- About page content goes here -->
+         <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'assets/img/about12.webp' %}"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-warning text-uppercase border-bottom border-5">Who we are</h5>
+                        <h1 class="display-4 text-secondary text-center">Friendly medical services for you</h1>
+                    </div>
+                    <p>We offer friendly and compassionate medical services to ensure you and your family receive the best care possible.
+
+                    </p>
+                    <p>We have a team of highly qualified and experienced doctors who are dedicated to providing the best possible care to our patients.
+                        Our nurses are compassionate and attentive, ensuring that you receive the support and care you need throughout your treatment. 
+                        We also have a state-of-the-art facility equipped with the latest medical technology to provide accurate diagnoses 
+                        and effective treatments. Our staff is committed to creating a welcoming and comfortable environment for all our patients, 
+                        making sure that you feel at ease during your visit.
+                    </p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-success mb-3"></i>
+                                <h6 class="mb-0">Qualified<small class="d-block text-danger">Doctors</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
+                                <h6 class="mb-0">Emergency<small class="d-block text-danger">Services</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
+                                <h6 class="mb-0">Accurate<small class="d-block text-danger">Testing</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
+                                <h6 class="mb-0">Free<small class="d-block text-danger">Ambulance</small></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    </main>
+{% endblock %}

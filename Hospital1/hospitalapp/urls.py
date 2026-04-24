@@ -1,11 +1,10 @@
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from hospitalapp import views
 from .views import STKPushView, MpesaCallbackView
 
 urlpatterns = [
-
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
@@ -18,8 +17,9 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('testimonial/', views.testimonial, name='testimonial'),
     path('starter/', views.starter, name='starter'),
-    path("stk-push/", STKPushView.as_view(), name="stk-push"),
-    path("callback/", MpesaCallbackView.as_view(), name="callback"),
     path("payment/", views.payment_page, name="payment-page"),
-    path("stk-push/", STKPushView.as_view(), name="stk-push"),
+    path("mpesa/", include(([
+        path("stk-push/", STKPushView.as_view(), name="stk-push"),
+        path("callback/", MpesaCallbackView.as_view(), name="callback"),
+    ], 'mpesa'))),
 ]

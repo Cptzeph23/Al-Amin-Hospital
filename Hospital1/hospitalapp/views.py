@@ -61,7 +61,7 @@ def normalize_phone(phone: str) -> str:
 
 
 def payment_page(request):
-    return render(request, "mpesa/payment.html")
+    return render(request, "payment.html")
 
 
 class STKPushView(View):

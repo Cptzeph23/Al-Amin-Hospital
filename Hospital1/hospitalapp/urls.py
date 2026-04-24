@@ -20,4 +20,6 @@ urlpatterns = [
     path('starter/', views.starter, name='starter'),
     path("stk-push/", STKPushView.as_view(), name="stk-push"),
     path("callback/", MpesaCallbackView.as_view(), name="callback"),
+    path("payment/", views.payment_page, name="payment-page"),
+    path("stk-push/", STKPushView.as_view(), name="stk-push"),
 ]

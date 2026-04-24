@@ -1,5 +1,20 @@
 from django.shortcuts import render
 
+import json
+import logging
+
+from django.http import JsonResponse
+from django.shortcuts import render
+from django.views import View
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+
+from .models import MpesaTransaction
+from .utils import initiate_stk_push
+
+logger = logging.getLogger(__name__)
+
+
 def index(request):
     return render(request, 'index.html')
 
@@ -36,19 +51,6 @@ def testimonial(request):
 def starter(request):
     return render(request, 'starter-page.html')
 
-import json
-import logging
-
-from django.http import JsonResponse
-from django.shortcuts import render
-from django.views import View
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
-
-from .models import MpesaTransaction
-from .utils import initiate_stk_push
-
-logger = logging.getLogger(__name__)
 
 
 def normalize_phone(phone: str) -> str:
